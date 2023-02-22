@@ -1,0 +1,247 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.margen-interno{
+    padding: 0 50px;
+}
+.father{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .header{
+        background: url(../images/header.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 330px;
+    }
+        .menu{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+            .logo{
+                flex: 1 1 auto;
+            }
+                .logo img{
+                    width: 30%;
+                    animation: moverIzquierda 1s ease-in;
+                }
+                .logo a:hover{
+                    color: #000;
+                }
+            .nav{
+                flex: 5 1 auto;
+            }
+                .nav a{
+                    color: grey;
+                    font-size: 11px;
+                    padding: 0px 10px;
+                    letter-spacing: 2px;
+                    animation: moverIzquierda 2s ease-in;
+                }
+                .nav a:hover{
+                    color: #000;
+                }
+            .social{
+                flex: 1 1 auto;
+                display: flex;
+            }
+                .social a{
+                    font-size: 16px;
+                    color: gray;
+                    padding: 0 5px;
+                    animation: moverIzquierda 1s ease-in;
+                }
+                .social a:hover{
+                    color: #000;
+                }
+        .text-principal{
+            background: rgba(0,0,0,.1);
+            margin: 110px 10px 0px 10px;
+            height: 175px;
+            display: flex;
+            align-items: center; 
+        }
+            h1{
+                font-family:'Sorts Mill Goudy', serif;
+                font-size: 21px;
+                padding: 10px 10px 20px 500px;
+                color: salmon;
+                font-weight: 100;
+                animation: moverIzquierda 2s ease-in;
+            }
+    .section{
+        display: flex;
+    }
+        .articles{
+            background: rgb(232, 229, 229);
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+            margin: 10px 0 0px 0;
+        }
+            .article{
+                color: #000;
+                font-size: 13px;
+                letter-spacing: 1px;
+                margin: 10px 10px;
+                flex: 1 1 45%;
+                background: white;
+            }
+            .article img{
+                width: 100%;
+                padding: 10px 10px;
+            }
+            .article p{
+                column-count: 2;
+                padding: 10px 10px;
+
+            }
+            .article a{
+                color: rgb(191, 188, 188);
+                font-size: 13px;
+                padding: 10px 10px;
+                display: inline-block;
+            }
+            .article a:hover{
+                color: #000;
+            }
+            h3{
+                color: yellow;
+                font-size: 13px;
+                padding: 10px 15px;
+                margin-top: -50px;
+            }
+            h2{
+                font-size: 25px;
+                text-transform: uppercase;
+                padding: 10px 20px 10px 20px;
+                color: white;
+                background: salmon;
+                margin: 5px 10px 5px 10px;
+                display: inline-flexbox;
+            }
+            .text{
+                background: rgb(232, 229, 229);
+                flex: 1 1 100%;
+                margin: 10px 5px 10px 0;
+                text-align: center;
+            }
+        .aside{
+            background: rgb(232, 229, 229);
+            flex: 1 1 auto;
+            margin: 10px 0px 0px 10px;
+            color: #000;
+        }
+        h4{
+            color: #000;
+            font-size: 16px;
+            font-weight: bolder;
+            padding: 10px;
+            text-align: center;
+        }
+            .comercial{
+                color: #000;
+                font-size: 13px;
+                letter-spacing: 1px;
+                margin: 10px 10px;
+                flex: 1 1 45%;
+            }
+    .footer{
+        background: rgb(232, 229, 229);
+        margin-block: 10px;
+    }
+        .foot{
+            background: rgb(241, 241, 236);
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .foot a{
+            color: black;
+            font-size: 11px;
+            padding: 10px 10px;
+            letter-spacing: 2px;
+        }
+
+        @keyframes moverIzquierda {
+            0%{
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+    
+@media screen and (max-width: 768px)  and (min-width: 480px){
+    .header{
+        height: 170px;
+    }
+        .logo img{
+            width: 25%;
+        }
+        .nav a{
+            font-size: 8px;
+        }
+        .social a{
+            font-size: 10px;
+        } 
+    .text-principal{
+        margin: 53px 10px 0px 10px;
+    }
+        h1{
+            font-size: 18px;
+            padding: 10px 80px 100px 150px;
+        }
+    .section{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .header{
+        height: 210px;
+    }
+        .logo img{
+            width: 20%;
+        }
+        .nav a{
+            flex-direction: column;
+            font-size: 8px;
+        }
+        .social a{
+            flex-direction: column;
+            font-size: 10px;
+        } 
+    .text-principal{
+        height: 70px;
+        margin: 50px 0px 0px 0px;
+    }
+        h1{
+            font-size: 16px;
+            padding: 20px 0px 5px 40px;
+        }
+    .menu{
+        flex-direction: column;
+    }
+    .section{
+        flex-direction: column;
+    }
+    .articles{
+        flex-direction: column;
+    }
+}
+ 

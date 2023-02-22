@@ -1,0 +1,96 @@
+*{
+    margin:10px;
+    padding:10px;
+    box-sizing: border-box;
+}
+.father{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .header{
+        background: black;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu{
+            background: #495579;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+            .logo{
+                background: #F94A29;
+                background-position: center;
+                background-attachment: contain;
+                background-size: cover;
+                flex: 1 1 auto;
+            }
+            .nav{
+                background: #F94A29;
+                flex: 5 1 auto;
+            }
+            .social{
+                background: #F94A29;
+                flex: 1 1 auto;
+            }
+        .text-principal{
+            background: #f6790c;
+        }
+            h1{
+                background: #ffd460;
+            }
+
+    .section{
+        background: #000;
+        display: flex;
+    }
+        .articles{
+            background: #495579;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background: #1f6cb0;
+                flex: 1 1 40%;
+            }
+            .text{
+                background: rgb(62, 136, 233);
+                flex: 1 1 100%;
+            }
+        .aside{
+            background: #f73f52;
+            flex: 1 1 auto;
+        }
+            .comercial{
+                background: #ffea85;
+            }
+    .footer{
+        background: #000;
+    }
+        .foot{
+            background: #ffea85;
+        }
+@media screen and (max-width: 768px)  and (min-width: 480px){
+    .section{
+        background: yellow;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 480px){
+    .menu{
+        flex-direction: column;
+    }
+    .section{
+        background: yellow;
+        flex-direction: column;
+    }
+    .articles{
+        flex-direction: column;
+    }
+    .aside{
+        background: #f6790c;
+    }
+    .comercial{
+        background: orange;
+    }
+}
